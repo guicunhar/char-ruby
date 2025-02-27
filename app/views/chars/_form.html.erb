@@ -1,0 +1,67 @@
+<%= form_with(model: char) do |form| %>
+  <% if char.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(char.errors.count, "error") %> prohibited this char from being saved:</h2>
+
+      <ul>
+        <% char.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :str, style: "display: block" %>
+    <%= form.number_field :str %>
+  </div>
+
+  <div>
+    <%= form.label :dex, style: "display: block" %>
+    <%= form.number_field :dex %>
+  </div>
+
+  <div>
+    <%= form.label :con, style: "display: block" %>
+    <%= form.number_field :con %>
+  </div>
+
+  <div>
+    <%= form.label :int, style: "display: block" %>
+    <%= form.number_field :int %>
+  </div>
+
+  <div>
+    <%= form.label :wis, style: "display: block" %>
+    <%= form.number_field :wis %>
+  </div>
+
+  <div>
+    <%= form.label :cha, style: "display: block" %>
+    <%= form.number_field :cha %>
+  </div>
+
+  <div>
+    <%= form.label :lvl, style: "display: block" %>
+    <%= form.number_field :lvl %>
+  </div>
+
+  <div>
+    <%= form.label :prof_bonus, style: "display: block" %>
+    <%= form.number_field :prof_bonus %>
+  </div>
+
+  <div>
+    <%= form.label :skill_id, style: "display: block" %>
+    <%= form.text_field :skill_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

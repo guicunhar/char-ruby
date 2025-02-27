@@ -57,8 +57,8 @@
   </div>
 
   <div>
-    <%= form.label :skill_id, style: "display: block" %>
-    <%= form.text_field :skill_id %>
+    <%= form.label :skills %>
+    <%= form.collection_select :skill_ids, Skill.all, :id, :name, {}, { multiple: true } %>
   </div>
 
   <div>

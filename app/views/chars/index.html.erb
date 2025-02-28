@@ -4,13 +4,25 @@
 
 <h1>Chars</h1>
 
-<div id="chars">
-  <% @chars.each do |char| %>
-    <%= render char %>
-    <p>
-      <%= link_to "Show this char", char %>
-    </p>
-  <% end %>
-</div>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Str</th>
+      <th>Dex</th>
+      <th>Con</th>
+      <th>Int</th>
+      <th>Wis</th>
+      <th>Cha</th>
+      <th>Lvl</th>
+      <th>Prof Bonus</th>
+      <th>Skills</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @chars %> 
+  </tbody>
+</table>
 
-<%= link_to "New char", new_char_path %>
+<%= link_to "New char", new_char_path, class: "btn btn-success" %>

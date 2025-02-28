@@ -3,8 +3,9 @@ class CharsController < ApplicationController
 
   # GET /chars or /chars.json
   def index
-    @chars = Char.all
+    @chars = Char.includes(:skills).all
   end
+  
 
   # GET /chars/1 or /chars/1.json
   def show
@@ -60,7 +61,7 @@ class CharsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_char
-      @char = Char.find(params.expect(:id))
+      @char = Char.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

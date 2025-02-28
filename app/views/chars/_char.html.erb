@@ -1,56 +1,25 @@
-<div id="<%= dom_id char %>">
-  <p>
-    <strong>Name:</strong>
-    <%= char.name %>
-  </p>
-
-  <p>
-    <strong>Str:</strong>
-    <%= char.str %>
-  </p>
-
-  <p>
-    <strong>Dex:</strong>
-    <%= char.dex %>
-  </p>
-
-  <p>
-    <strong>Con:</strong>
-    <%= char.con %>
-  </p>
-
-  <p>
-    <strong>Int:</strong>
-    <%= char.int %>
-  </p>
-
-  <p>
-    <strong>Wis:</strong>
-    <%= char.wis %>
-  </p>
-
-  <p>
-    <strong>Cha:</strong>
-    <%= char.cha %>
-  </p>
-
-  <p>
-    <strong>Lvl:</strong>
-    <%= char.lvl %>
-  </p>
-
-  <p>
-    <strong>Prof bonus:</strong>
-    <%= char.prof_bonus %>
-  </p>
-
-  <p>
-    <strong>Skills:</strong>
-    <ul>
-      <% char.skills.each do |skill| %>
-        <li><%= skill.name %></li>
-      <% end %>
-    </ul>
-  </p>
-
-</div>
+<tr id="<%= dom_id(char) %>">
+  <td><%= char.name %></td>
+  <td><%= char.str %></td>
+  <td><%= char.dex %></td>
+  <td><%= char.con %></td>
+  <td><%= char.int %></td>
+  <td><%= char.wis %></td>
+  <td><%= char.cha %></td>
+  <td><%= char.lvl %></td>
+  <td><%= char.prof_bonus %></td>
+  <td>
+    <% if char.skills.present? %>
+      <ul>
+        <% char.skills.each do |skill| %>
+          <li><%= skill.name %></li>
+        <% end %>
+      </ul>
+    <% else %>
+      None
+    <% end %>
+  </td>
+  <td>
+    <%= link_to 'Show this char', char_path(char), class: 'btn btn-primary' %>
+  </td>
+</tr>

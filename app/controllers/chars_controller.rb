@@ -66,6 +66,6 @@ class CharsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def char_params
-      params.require(:char).permit(:name, :str, :dex, :con, :int, :wis, :cha, :lvl, :prof_bonus, skill_ids: [])
+      params.require(:char).permit(:name, :str, :dex, :con, :int, :wis, :cha, :lvl, skill_ids: [])
     end
 end

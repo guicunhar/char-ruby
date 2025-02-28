@@ -17,7 +17,7 @@ class CharsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create char" do
     assert_difference("Char.count") do
-      post chars_url, params: { char: { cha: @char.cha, con: @char.con, dex: @char.dex, int: @char.int, lvl: @char.lvl, name: @char.name, prof_bonus: @char.prof_bonus, skill_id: @char.skill_id, str: @char.str, wis: @char.wis } }
+      post chars_url, params: { char: { cha: @char.cha, con: @char.con, dex: @char.dex, int: @char.int, lvl: @char.lvl, name: @char.name, str: @char.str, wis: @char.wis } }
     end
 
     assert_redirected_to char_url(Char.last)
@@ -34,7 +34,7 @@ class CharsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update char" do
-    patch char_url(@char), params: { char: { cha: @char.cha, con: @char.con, dex: @char.dex, int: @char.int, lvl: @char.lvl, name: @char.name, prof_bonus: @char.prof_bonus, skill_id: @char.skill_id, str: @char.str, wis: @char.wis } }
+    patch char_url(@char), params: { char: { cha: @char.cha, con: @char.con, dex: @char.dex, int: @char.int, lvl: @char.lvl, name: @char.name, str: @char.str, wis: @char.wis } }
     assert_redirected_to char_url(@char)
   end
 

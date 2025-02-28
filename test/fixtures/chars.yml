@@ -9,8 +9,6 @@ one:
   wis: 1
   cha: 1
   lvl: 1
-  prof_bonus: 1
-  skill: one
 
 two:
   name: MyString
@@ -21,5 +19,3 @@ two:
   wis: 1
   cha: 1
   lvl: 1
-  prof_bonus: 1
-  skill: two

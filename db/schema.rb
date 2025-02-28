@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_02_27_184441) do
+ActiveRecord::Schema[8.0].define(version: 2025_02_28_153052) do
   create_table "char_skills", force: :cascade do |t|
     t.integer "char_id", null: false
     t.integer "skill_id", null: false
@@ -29,7 +29,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_02_27_184441) do
     t.integer "wis"
     t.integer "cha"
     t.integer "lvl"
-    t.integer "prof_bonus"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
